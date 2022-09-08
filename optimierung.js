@@ -1,13 +1,3 @@
-srv.before('NEW', Box, async req =>
-{
-    //const maxID = 1348;  //SQL-Hana
-    const maxID = await srv.run(SELECT(`max(boxID) as maxID`).from(Box));
-    req.data.boxID = maxID[0].maxID + 1;
-    req.data.boxStatus_code = 'L';
-})
-
-
-
 /////////////////////////////////////////////////////////////////////
 //Box Not Available Handler
 /////////////////////////////////////////////////////////////////////    
