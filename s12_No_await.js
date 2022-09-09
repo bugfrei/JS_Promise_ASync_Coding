@@ -24,7 +24,7 @@ async function start()
 
     // Job ausführen, z.B. let UPDATE_JOB = srv.run(UPDATE ...);
     console.log("UPDATE_JOB wird gestartet:")
-    let UPDATE_JOB = src_run_UPDATE();                              // HIER await hinzufügen *****************************
+    let UPDATE_JOB = await src_run_UPDATE();                              // HIER await hinzufügen *****************************
     console.log("Direkt nach dem Starten des Jobs.");
 
     // der rest des Events braucht nur 500 ms
