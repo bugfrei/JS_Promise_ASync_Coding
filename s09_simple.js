@@ -2,11 +2,14 @@
 // Eine Job benötigt 100-600 ms
 async function srv_run_SELECT(i)
 {
-    let ms = Math.floor(Math.random() * 500 + 100);
+    let ms = Math.floor(Math.random() * 5000 + 100);
     await new Promise(resolve => setTimeout(resolve, ms));
     console.log("done: " + i + " (" + ms + " ms)");
     return true;
+
+
 }
+
 
 // Es werden 20 Jobs gestartet (Zeitgleich)...
 async function start()
